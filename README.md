@@ -13,10 +13,16 @@ rm -rf ~/lenovo_professional_wireless_keyboard
 ```
 ## Repo Details  
 
-`./install.sh` creates a systemd service that enables and runs lenovo_keyboard.service in the background. Thus the levono keyboard will not work before PID(1), e.g. during the hard drive decryption password prompt ([LUKS](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)).
+`./install.sh` tells systemd to enable and run lenovo_keyboard.service in the background. Thus the levono keyboard will not work before PID(1), e.g. during the hard drive decryption password prompt ([LUKS](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)).
+
+The keybindings in `kbdusb.c` are not linked with ASCII in the `mapkey()` function.
 
 
-The `lenovo_keyboard.service` has an **Alias** called, `mykeyboard.service`.If the `lenovo_keyboard.service` was already installed, enabled and started but would like to option of changing the name of the alias, proceed with the following:
+### Service Customization  
+
+The `lenovo_keyboard.service` has an **Alias** called, `mykeyboard.service`.
+
+If the `lenovo_keyboard.service` was already enabled and started but would like to option of **changing the name of the alias, proceed with the following**:
 
 ```bash
 cd /etc/systemd/system
@@ -24,22 +30,21 @@ cd /etc/systemd/system
 sudo vim lenovo_keyboard.service
 ```
 
-Inside vim:
+**Inside vim**:
 
 Change the words after `Alias=` to any name e.g. `Alias=something.service`. Must include `.service` extension.
 
-Finish with the following example:
+**Finish with the following example**:
 
 ```bash
 systemctl reenable something.service
 ```
-Bash will prompt you for your password.
+**Bash will prompt you for your password**.
 
-After completing the above command, do `systemctl status something.service` to check if successful. Below is the expected output:
+After completing the above command, do `systemctl status something.service` to **check if successful**. Below is the expected output:
 
+![systemctl status servicename.service picture](SystemctlStatus.png)
 
-
-The keybindings in `kbdusb.c` are not linked with ASCII in the `mapkey()` function.
 
 Some useful guides on creating a systemd service:  
 1.  [Creating Systemd Servie Files](https://www.devdungeon.com/content/creating-systemd-service-files)
