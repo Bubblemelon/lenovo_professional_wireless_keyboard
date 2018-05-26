@@ -27,9 +27,9 @@ case 0x32:
   keysent = KEY_BACKSLASH;
   break;
 ```
-Meaning, the <kbd>\\</kbd> and <kdb>|</kdb> keys (the key above <kdb>Enter</kdb>) does not work. I am unsure of the reason.
+Meaning, the <kbd>\\</kbd> and <kdb>\|</kdb> keys (the key above <kdb>Enter</kdb>) does not work. I am unsure of the reason.
 
-So I simply replaced the <kdb>-</kdb> key on the **Keypad** section of my Lenovo Keyboard with the following:
+So I simply replaced the <kdb>\-</kdb> key on the **Keypad** section of my Lenovo Keyboard with the following:
 
 ```bash
 // changing this to \ (backslash) and | (pipe) on keypad: ( was previously KEY_KPMINUS )
