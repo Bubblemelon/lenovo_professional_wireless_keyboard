@@ -170,6 +170,7 @@ int mapkey(const unsigned char keypressed) {
     case 0x35:
       keysent = KEY_GRAVE;
       break;
+      // this does not work on my lenovo keyboard
     case 0x32:
       keysent = KEY_BACKSLASH;
       break;
@@ -242,8 +243,9 @@ int mapkey(const unsigned char keypressed) {
     case 0x61:
       keysent = KEY_KP9;
       break;
+      // changing this to \ (backslash) and | (pipe) on keypad: ( was previously KEY_KPMINUS )
     case 0x56:
-      keysent = KEY_KPMINUS;
+      keysent = KEY_BACKSLASH;
       break;
     case 0x5c:
       keysent = KEY_KP4;
