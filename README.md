@@ -73,7 +73,9 @@ break;
 Fact: `<kdb>|</kdb>` and `<kdb>ENTER</kdb>` and `<kdb>-</kdb>` do not render as key glyphs on Github Markdown.
 > Let me know if there's a way to do this!
 
-### Should work on:  
+### Distro and Kernel Version  
+
+The files on this repo should be able to work on:    
 
 ```
 Ubuntu: 16.04  
