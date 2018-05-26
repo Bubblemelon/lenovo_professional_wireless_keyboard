@@ -15,9 +15,12 @@ rm -rf ~/lenovo_professional_wireless_keyboard
 
 `./install.sh` creates a systemd service that enables and runs lenovo_keyboard.service in the background. Thus the levono keyboard will not work before PID(1), e.g. during the hard drive decryption password prompt ([LUKS](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)).
 
-
 The keybindings in `kbdusb.c` are not linked with ASCII in the `mapkey()` function.
 
+Some useful guides on creating a systemd service:  
+1.  [Creating Systemd Servie Files](https://www.devdungeon.com/content/creating-systemd-service-files)
+
+2. [Systemd Manual](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)
 
 ### Main Difference from Forked Origin  
 
