@@ -103,10 +103,11 @@ kernel-4.16.9-300.fc28.x86_64
 
 ## Notes on `xev` & `xmodmap`  
 
-This is a great [askubuntu guide](https://askubuntu.com/questions/296155/how-can-i-remap-keyboard-keys) on how to map a keyboard with xmodmap and use xev to test the configuration.
+This is a great [askubuntu guide](https://askubuntu.com/questions/296155/how-can-i-remap-keyboard-keys) on how to map keys to different symbols on a keyboard with `xmodmap` and using `xev` to test the configuration.
 
 The above guide says to do a reboot so that the `~/.Xmodmap` configuration will take affect, but doing `xmodmap .Xmodmap` will apply the configuration as indicated in the link below.
 
 Use the [Arch Linux wiki on Xmodmap](https://wiki.archlinux.org/index.php/Xmodmap) as additional reference.
 
-**Important**: `xev` will show that your configuration is working provided that the askubuntu guide was followed correctly. **However**, the `lenovo_keyboard.service` daemon will override the configurations in the `~/.Xmodmap` file !
+**Important**:  
+`xev` will show that your configuration is working provided that the askubuntu guide was followed correctly. **However**, the `lenovo_keyboard.service` daemon will override the configurations in the `~/.Xmodmap` file !
