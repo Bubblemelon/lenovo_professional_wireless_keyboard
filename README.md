@@ -27,7 +27,7 @@ case 0x32:
   keysent = KEY_BACKSLASH;
   break;
 ```
-Meaning, the <kdb> \ </kdb> and <kdb> | </kdb> keys (the key above <kdb>Enter</kdb>) does not work. I am unsure of the reason.
+Meaning, the <kbd>\\</kbd> and <kdb>|</kdb> keys (the key above <kdb>Enter</kdb>) does not work. I am unsure of the reason.
 
 So I simply replaced the <kdb>-</kdb> key on the **Keypad** section of my Lenovo Keyboard with the following:
 
@@ -41,8 +41,10 @@ break;
 
 ### Should work on:  
 
+```
 Ubuntu: 16.04  
 Kernel: 4.10  
+```
 
 My Machine Info:
 
