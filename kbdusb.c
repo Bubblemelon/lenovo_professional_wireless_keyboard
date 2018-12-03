@@ -625,7 +625,7 @@ int main() {
           memset(&ev, 0, sizeof(ev));
           ev.type = EV_KEY;
           ev.value = 1;
-          ev.code = KEY_COPY;
+          ev.code = KEY_LEFTMETA;
           ret = write(fd, &ev, sizeof(ev));
         }
       }
