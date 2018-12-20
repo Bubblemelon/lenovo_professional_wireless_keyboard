@@ -3,7 +3,7 @@
 ## Installation    
 
 ```bash
-git clone https://github.com/Bubblemelon/lenovo_professional_wireless_keyboard.git
+git clone https://github.com/carlochess/lenovo_professional_wireless_keyboard.git
 
 cd ~/lenovo_professional_wireless_keyboard
 
